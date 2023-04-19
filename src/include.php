@@ -23,7 +23,7 @@ if (! function_exists(__NAMESPACE__ . '\\register3Dot0Dot0')) {
 
     function initialize3Dot0Dot0()
     {
-        require_once __DIR__ . '/../src-prefixed/autoload.php';
+        require_once __DIR__ . '/../lib/autoload.php';
         do_action('publishpress_psr_container_3_dot_0_dot_0_initialized');
     }
 

@@ -23,9 +23,8 @@ if (! function_exists(__NAMESPACE__ . '\\register2Dot2Dot0')) {
 
     function initialize2Dot2Dot0()
     {
-        require_once __DIR__ . '/../src-prefixed/autoload.php';
+        require_once __DIR__ . '/../lib/autoload.php';
     }
-
     // Support usage in themes - load this version if no plugin has loaded a version yet.
     if (did_action('plugins_loaded') && ! doing_action('plugins_loaded') && ! interface_exists('PublishPress\\Psr\\Container\\ContainerInterface')) {
         initialize2Dot2Dot0();

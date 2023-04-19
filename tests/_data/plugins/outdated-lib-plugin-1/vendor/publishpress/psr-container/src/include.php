@@ -23,7 +23,7 @@ if (! function_exists(__NAMESPACE__ . '\\register2Dot0Dot0')) {
 
     function initialize2Dot0Dot0()
     {
-        require_once __DIR__ . '/../src-prefixed/autoload.php';
+        require_once __DIR__ . '/../lib/autoload.php';
     }
 
     // Support usage in themes - load this version if no plugin has loaded a version yet.

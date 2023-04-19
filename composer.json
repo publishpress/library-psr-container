@@ -41,7 +41,7 @@
     },
     "extra": {
         "strauss": {
-            "target_directory": "src-prefixed",
+            "target_directory": "lib",
             "namespace_prefix": "PublishPress\\",
             "classmap_prefix": "PublishPress_",
             "constant_prefix": "PUBLISHPRESS_",
