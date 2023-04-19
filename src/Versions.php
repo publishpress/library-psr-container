@@ -15,13 +15,13 @@ if (! class_exists('PublishPress\\VersionsManager\\Versions')) {
 
         private $versions = array();
 
-        public function register($version_string, $initialization_callback): bool
+        public function register($versionString, $initializationCallback): bool
         {
-            if (isset($this->versions[$version_string])) {
+            if (isset($this->versions[$versionString])) {
                 return false;
             }
 
-            $this->versions[$version_string] = $initialization_callback;
+            $this->versions[$versionString] = $initializationCallback;
 
             return true;
         }
