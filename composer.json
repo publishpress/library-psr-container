@@ -40,6 +40,9 @@
         "publishpress/codeception-extension-extended-copier": "^1.0"
     },
     "extra": {
+        "generator":{
+            "lib-class-test": "interface_exists('PublishPress\\Psr\\Container\\ContainerInterface')"
+        },
         "strauss": {
             "target_directory": "lib",
             "namespace_prefix": "PublishPress\\",
@@ -70,11 +73,19 @@
         "strauss": [
             "vendor/bin/strauss"
         ],
+        "generate-files": [
+            "php scripts/version-manager-generator.php"
+        ],
         "post-install-cmd": [
-            "@strauss"
+            "@strauss",
+            "@generate-files"
         ],
         "post-update-cmd": [
-            "@strauss"
+            "@strauss",
+            "@generate-files"
+        ],
+        "test": [
+            "vendor/bin/codecept run wpunit"
         ]
     }
 }

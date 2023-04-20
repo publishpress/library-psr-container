@@ -1,6 +1,13 @@
 <?php
 
-use PublishPress\VersionsManager\Versions;
+/*****************************************************************
+ * This file is generated on composer update command by
+ * a custom script. 
+ * 
+ * Do not edit it manually!
+ ****************************************************************/
+
+use PublishPress\PsrContainer\Versions;
 
 class VersionsCest
 {
@@ -12,28 +19,28 @@ class VersionsCest
 
         $I->assertNotEmpty($registeredVersions);
         $I->assertEquals([
-            '2.0.0' => 'PublishPress\PsrContainer\initialize2Dot0Dot0',
-            '2.2.0' => 'PublishPress\PsrContainer\initialize2Dot2Dot0',
-            '3.0.0' => 'PublishPress\PsrContainer\initialize3Dot0Dot0',
+            '2.0.0.1' => 'PublishPress\PsrContainer\initialize2Dot0Dot0Dot1',
+            '2.0.0.2' => 'PublishPress\PsrContainer\initialize2Dot0Dot0Dot2',
+            '2.0.1.1' => 'PublishPress\PsrContainer\initialize2Dot0Dot1Dot1',
         ], $registeredVersions);
     }
 
-    public function testLatestVersionIs3Dot0Dot0(WpunitTester $I)
+    public function testLatestVersionIsTheCurrentVersion(WpunitTester $I)
     {
         $versions = Versions::getInstance();
 
         $latestVersion = $versions->latestVersion();
 
-        $I->assertEquals('3.0.0', $latestVersion);
+        $I->assertEquals('2.0.1.1', $latestVersion);
     }
 
-    public function testLatestVersionCallbackIs3Dot0Dot0(WpunitTester $I)
+    public function testLatestVersionCallbackIsTheLastOne(WpunitTester $I)
     {
         $versions = Versions::getInstance();
 
         $latestVersionCallback = $versions->latestVersionCallback();
 
-        $I->assertEquals('PublishPress\PsrContainer\initialize3Dot0Dot0', $latestVersionCallback);
+        $I->assertEquals('PublishPress\PsrContainer\initialize2Dot0Dot1Dot1', $latestVersionCallback);
     }
 
     public function testInitializeLatestVersion(WpunitTester $I)
@@ -44,7 +51,8 @@ class VersionsCest
 
         $I->assertTrue(interface_exists('PublishPress\Psr\Container\ContainerInterface'));
 
-        $didAction = (bool)did_action('publishpress_psr_container_3_dot_0_dot_0_initialized');
+        $didAction = (bool)did_action('publishpress_psr_container_2Dot0Dot1Dot1_initialized');
         $I->assertTrue($didAction);
     }
 }
+        

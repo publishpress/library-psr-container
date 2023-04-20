@@ -2,7 +2,7 @@
 /**
  * @license MIT
  *
- * Modified by PHP-FIG on 19-April-2023 using Strauss.
+ * Modified by PHP-FIG on 20-April-2023 using Strauss.
  * @see https://github.com/BrianHenryIE/strauss
  */
 

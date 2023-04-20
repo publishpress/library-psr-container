@@ -1,6 +1,6 @@
 <?php
 
-namespace PublishPress\VersionsManager;
+namespace PublishPress\PsrContainer;
 /**
  * Based on the ActionScheduler_Versions class from Action Scheduler library.
  */

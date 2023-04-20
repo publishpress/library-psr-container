@@ -1,15 +1,23 @@
 <?php
 
-namespace PublishPress\VersionsManager;
 
-if (! class_exists('PublishPress\\VersionsManager\\Versions')) {
+/*****************************************************************
+ * This file is generated on composer update command by
+ * a custom script. 
+ * 
+ * Do not edit it manually!
+ ****************************************************************/
+ 
+namespace PublishPress\PsrContainer;
+
+if (! class_exists('PublishPress\\PsrContainer\\Versions')) {
     /**
      * Based on the ActionScheduler_Versions class from Action Scheduler library.
      */
     class Versions
     {
         /**
-         * @var \PublishPress\VersionsManager\Versions
+         * @var Versions
          */
         private static $instance = null;
 
@@ -52,7 +60,7 @@ if (! class_exists('PublishPress\\VersionsManager\\Versions')) {
         }
 
         /**
-         * @return \PublishPress\VersionsManager\Versions
+         * @return Versions
          * @codeCoverageIgnore
          */
         public static function getInstance(): ?Versions
