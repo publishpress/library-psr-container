@@ -16,7 +16,6 @@ extensions:
                 1: "tests/_data/plugins/outdated-lib-plugin-1:%WP_ROOT_FOLDER%/wp-content/plugins/outdated-lib-plugin-1"
                 2: "tests/_data/plugins/outdated-lib-plugin-2:%WP_ROOT_FOLDER%/wp-content/plugins/outdated-lib-plugin-2"
                 3: "lib:%WP_ROOT_FOLDER%/wp-content/plugins/updated-lib-plugin/vendor/publishpress/psr-container/lib/"
-                4: "src:%WP_ROOT_FOLDER%/wp-content/plugins/updated-lib-plugin/vendor/publishpress/psr-container/src/"
     commands:
         - Codeception\Command\GenerateWPUnit
         - Codeception\Command\GenerateWPRestApi

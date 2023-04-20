@@ -14,4 +14,4 @@
  * @package OutdatedLibPlugin1
  */
 
-require_once __DIR__ . '/vendor/publishpress/psr-container/src/include.php';
+require_once __DIR__ . '/vendor/publishpress/psr-container/lib/include.php';
