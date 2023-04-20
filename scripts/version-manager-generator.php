@@ -17,7 +17,18 @@ $versionStrForFunction = str_replace('.', 'Dot', $version);
 
 $classTest = $composerData['extra']['generator']['lib-class-test'];
 
-function generateIncludeFile($namespace, $version, $versionStrForFunction, $classTest)
+$actionPrefix = preg_replace_callback(
+    '/([A-Z])/',
+    function ($matches) {
+        return '_' . strtolower($matches[1]);
+    },
+    $namespace
+);
+$actionPrefix = str_replace('\\', '', $actionPrefix);
+$actionPrefix = str_replace('publish_press', 'publishpress', $actionPrefix);
+$actionPrefix = ltrim($actionPrefix, '_');
+
+function generateIncludeFile($namespace, $version, $versionStrForFunction, $classTest, $actionPrefix)
 {
     $includeFile = __DIR__ . '/../src/include.php';
 
@@ -58,7 +69,7 @@ if (! function_exists(__NAMESPACE__ . '\\%VERSION_STR%')) {
     function initialize%VERSION_STR%()
     {
         require_once __DIR__ . '/../lib/autoload.php';
-        do_action('publishpress_psr_container_%VERSION_STR%_initialized');
+        do_action('%ACTION_PREFIX%_%VERSION_STR%_initialized');
     }
 }
 
@@ -69,6 +80,7 @@ TEMPLATE;
         '%VERSION%' => $version,
         '%VERSION_STR%' => $versionStrForFunction,
         '%CLASS_TEST%' => $classTest,
+        '%ACTION_PREFIX%' => $actionPrefix,
     ];
     $fileContent = "<?php\n\n" . str_replace(array_keys($placeholders), array_values($placeholders), $template);
 
@@ -187,7 +199,7 @@ TEMPLATE;
 
 }
 
-function generateTestFile($namespace, $version, $versionStrForFunction, $classTest)
+function generateTestFile($namespace, $version, $versionStrForFunction, $classTest, $actionPrefix)
 {
     $testFile = __DIR__ . '/../tests/VersionManagerTest.php';
 
@@ -198,17 +210,6 @@ function generateTestFile($namespace, $version, $versionStrForFunction, $classTe
     echo "Generating file tests/VersionManagerTest.php\n";
 
     $namespaceStr = str_replace('\\', '\\\\', $namespace);
-
-    $actionPrefix = preg_replace_callback(
-        '/([A-Z])/',
-        function ($matches) {
-            return '_' . strtolower($matches[1]);
-        },
-        $namespace
-    );
-    $actionPrefix = str_replace('\\', '', $actionPrefix);
-    $actionPrefix = str_replace('publish_press', 'publishpress', $actionPrefix);
-    $actionPrefix = ltrim($actionPrefix, '_');
 
     // Create the Versions.php file
     $template = <<<TEMPLATE
@@ -284,8 +285,8 @@ TEMPLATE;
 }
 
 
-generateIncludeFile($namespace, $version, $versionStrForFunction, $classTest);
+generateIncludeFile($namespace, $version, $versionStrForFunction, $classTest, $actionPrefix);
 generateVersionClassFile($namespace, $version, $versionStrForFunction);
-generateTestFile($namespace, $version, $versionStrForFunction, $classTest);
+generateTestFile($namespace, $version, $versionStrForFunction, $classTest, $actionPrefix);
 
 echo "Versions file generated successfully\n";
