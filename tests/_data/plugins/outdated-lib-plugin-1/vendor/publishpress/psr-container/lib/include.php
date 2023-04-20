@@ -21,6 +21,6 @@ if (! function_exists(__NAMESPACE__ . '\\register2Dot0Dot0Dot1')) {
 
     function initialize2Dot0Dot0Dot1()
     {
-        require_once __DIR__ . '/../lib/autoload.php';
+        require_once __DIR__ . '/autoload.php';
     }
 }

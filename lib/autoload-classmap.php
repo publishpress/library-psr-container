@@ -5,6 +5,7 @@
 $strauss_src = dirname(__FILE__);
 
 return array(
+   'PublishPress\PsrContainer\Versions' => $strauss_src . '/Versions.php',
    'PublishPress\Psr\Container\NotFoundExceptionInterface' => $strauss_src . '/psr/container/src/NotFoundExceptionInterface.php',
    'PublishPress\Psr\Container\ContainerInterface' => $strauss_src . '/psr/container/src/ContainerInterface.php',
    'PublishPress\Psr\Container\ContainerExceptionInterface' => $strauss_src . '/psr/container/src/ContainerExceptionInterface.php',

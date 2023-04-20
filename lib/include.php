@@ -28,7 +28,7 @@ if (! function_exists(__NAMESPACE__ . '\2Dot0Dot1Dot1')) {
 
     function initialize2Dot0Dot1Dot1()
     {
-        require_once __DIR__ . '/../lib/autoload.php';
+        require_once __DIR__ . '/autoload.php';
         do_action('publishpress_psr_container_2Dot0Dot1Dot1_initialized');
     }
 }
