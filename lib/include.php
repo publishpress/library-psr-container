@@ -16,7 +16,7 @@ if (! function_exists('add_action')) {
     return;
 }
 
-if (! function_exists(__NAMESPACE__ . '\2Dot0Dot1Dot4')) {
+if (! function_exists(__NAMESPACE__ . '\register2Dot0Dot1Dot4')) {
     if (! class_exists('PublishPress\PsrContainer\Versions')) {
         require_once __DIR__ . '/Versions.php';
 
