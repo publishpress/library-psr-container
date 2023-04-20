@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6fc6aa9bc3496d516c2b804efbba891",
+    "content-hash": "8acf77bc28d7a0245bc125d91cd17979",
     "packages": [],
     "packages-dev": [
         {
@@ -4206,6 +4206,47 @@
                 "source": "https://github.com/publishpress/codeception-extension-extended-copier/tree/1.0.0"
             },
             "time": "2023-04-19T15:56:57+00:00"
+        },
+        {
+            "name": "publishpress/version-loader-generator",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/publishpress/library-version-loader-generator.git",
+                "reference": "ecfd1af4213a5e93b053c0e83e30a1fa6562638e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/publishpress/library-version-loader-generator/zipball/ecfd1af4213a5e93b053c0e83e30a1fa6562638e",
+                "reference": "ecfd1af4213a5e93b053c0e83e30a1fa6562638e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*"
+            },
+            "require-dev": {
+                "php": ">=7.2.5"
+            },
+            "bin": [
+                "bin/version-loader-generator"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Anderson Martins",
+                    "email": "anderson@publishpress.com"
+                }
+            ],
+            "description": "Composer script to generate the version loader files for libraries on PubilshPress",
+            "support": {
+                "issues": "https://github.com/publishpress/library-version-loader-generator/issues",
+                "source": "https://github.com/publishpress/library-version-loader-generator/tree/1.1.0"
+            },
+            "time": "2023-04-20T02:55:31+00:00"
         },
         {
             "name": "ralouphie/getallheaders",

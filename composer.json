@@ -37,7 +37,8 @@
         "codeception/module-filesystem": "^1.0",
         "codeception/module-cli": "^1.0",
         "codeception/util-universalframework": "^1.0",
-        "publishpress/codeception-extension-extended-copier": "^1.0"
+        "publishpress/codeception-extension-extended-copier": "^1.0",
+        "publishpress/version-loader-generator": "^1.0"
     },
     "extra": {
         "generator":{
@@ -74,7 +75,7 @@
             "vendor/bin/strauss"
         ],
         "generate-files": [
-            "php scripts/version-manager-generator.php"
+            "vendor/bin/version-loader-generator"
         ],
         "post-install-cmd": [
             "@strauss",

@@ -55,4 +55,3 @@ class VersionsCest
         $I->assertTrue($didAction);
     }
 }
-        
