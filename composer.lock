@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e0df493331d55fafab7028688a68a46",
+    "content-hash": "165d9cc478b7fd743205fb5f76ccd4e5",
     "packages": [],
     "packages-dev": [
         {
@@ -4209,22 +4209,26 @@
         },
         {
             "name": "publishpress/version-loader-generator",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/publishpress/library-version-loader-generator.git",
-                "reference": "b638b3ee69a1090a278ddd027c75c7d967f72360"
+                "reference": "29265d0d794d4b1c26e8a312e68dd10a99dced14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/publishpress/library-version-loader-generator/zipball/b638b3ee69a1090a278ddd027c75c7d967f72360",
-                "reference": "b638b3ee69a1090a278ddd027c75c7d967f72360",
+                "url": "https://api.github.com/repos/publishpress/library-version-loader-generator/zipball/29265d0d794d4b1c26e8a312e68dd10a99dced14",
+                "reference": "29265d0d794d4b1c26e8a312e68dd10a99dced14",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*"
             },
             "require-dev": {
+                "codeception/module-asserts": "^1.0",
+                "codeception/module-filesystem": "^1.0",
+                "codeception/util-universalframework": "^1.0",
+                "lucatume/wp-browser": "^3.1",
                 "php": ">=7.2.5"
             },
             "bin": [
@@ -4244,9 +4248,9 @@
             "description": "Composer script to generate the version loader files for libraries on PubilshPress",
             "support": {
                 "issues": "https://github.com/publishpress/library-version-loader-generator/issues",
-                "source": "https://github.com/publishpress/library-version-loader-generator/tree/1.1.4"
+                "source": "https://github.com/publishpress/library-version-loader-generator/tree/1.1.5"
             },
-            "time": "2023-04-20T15:45:33+00:00"
+            "time": "2023-04-20T20:13:14+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
