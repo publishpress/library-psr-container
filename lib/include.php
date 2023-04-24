@@ -24,10 +24,10 @@ if (! function_exists(__NAMESPACE__ . '\register2Dot0Dot1Dot5')) {
     if (! class_exists('PublishPress\PsrContainer\Versions')) {
         require_once __DIR__ . '/Versions.php';
 
-        add_action('plugins_loaded', [Versions::class, 'initializeLatestVersion'], 1, 0);
+        add_action('plugins_loaded', [Versions::class, 'initializeLatestVersion'], -20, 0);
     }
 
-    add_action('plugins_loaded', __NAMESPACE__ . '\register2Dot0Dot1Dot5', 1, 0);
+    add_action('plugins_loaded', __NAMESPACE__ . '\register2Dot0Dot1Dot5', -20, 0);
 
     function register2Dot0Dot1Dot5()
     {
