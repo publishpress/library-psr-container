@@ -1,6 +1,6 @@
 {
     "name": "publishpress/psr-container",
-    "version": "2.0.1.7",
+    "version": "2.0.1.8",
     "type": "library",
     "description": "Common Container Interface (PHP FIG PSR-11), prefixed for PublishPress plugins",
     "keywords": [
