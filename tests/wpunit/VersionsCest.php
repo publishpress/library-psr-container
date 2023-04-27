@@ -21,7 +21,7 @@ class VersionsCest
         $I->assertEquals([
             '2.0.0.1' => 'PublishPress\PsrContainer\initialize2Dot0Dot0Dot1',
             '2.0.0.2' => 'PublishPress\PsrContainer\initialize2Dot0Dot0Dot2',
-            '2.0.1.8' => 'PublishPress\PsrContainer\initialize2Dot0Dot1Dot8',
+            '2.0.1.9' => 'PublishPress\PsrContainer\initialize2Dot0Dot1Dot9',
         ], $registeredVersions);
     }
 
@@ -31,7 +31,7 @@ class VersionsCest
 
         $latestVersion = $versions->latestVersion();
 
-        $I->assertEquals('2.0.1.8', $latestVersion);
+        $I->assertEquals('2.0.1.9', $latestVersion);
     }
 
     public function testLatestVersionCallbackIsTheLastOne(WpunitTester $I)
@@ -40,7 +40,7 @@ class VersionsCest
 
         $latestVersionCallback = $versions->latestVersionCallback();
 
-        $I->assertEquals('PublishPress\PsrContainer\initialize2Dot0Dot1Dot8', $latestVersionCallback);
+        $I->assertEquals('PublishPress\PsrContainer\initialize2Dot0Dot1Dot9', $latestVersionCallback);
     }
 
     public function testInitializeLatestVersion(WpunitTester $I)
@@ -51,7 +51,7 @@ class VersionsCest
 
         $I->assertTrue(interface_exists('PublishPress\Psr\Container\ContainerInterface'));
 
-        $didAction = (bool)did_action('publishpress_psr_container_2Dot0Dot1Dot8_initialized');
+        $didAction = (bool)did_action('publishpress_psr_container_2Dot0Dot1Dot9_initialized');
         $I->assertTrue($didAction);
     }
 }
