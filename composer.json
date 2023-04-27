@@ -23,11 +23,6 @@
             "email": "help@publishpress.com"
         }
     ],
-    "autoload": {
-        "files": [
-            "lib/include.php"
-        ]
-    },
     "require": {
         "php": ">=7.2.5"
     },
