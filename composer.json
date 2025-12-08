@@ -1,6 +1,6 @@
 {
     "name": "publishpress/psr-container",
-    "version": "2.0.1.10",
+    "version": "2.0.2.0",
     "type": "library",
     "description": "Common Container Interface (PHP FIG PSR-11), prefixed for PublishPress plugins",
     "keywords": [
@@ -32,7 +32,7 @@
         "php": ">=7.2.5"
     },
     "require-dev": {
-        "psr/container": "2.0.1",
+        "psr/container": "2.0.2",
         "brianhenryie/strauss": "^0.14.0",
         "lucatume/wp-browser": "^3.1",
         "codeception/module-asserts": "^1.0",
