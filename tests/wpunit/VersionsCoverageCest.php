@@ -15,7 +15,7 @@ class VersionsCoverageCest
         $versions = Versions::getInstance();
 
         // Try to register a version that already exists
-        $result = $versions->register('2.0.2.0', 'some_callback');
+        $result = $versions->register('2.0.2.1', 'some_callback');
 
         $I->assertFalse($result, 'Duplicate registration should return false');
     }
@@ -110,7 +110,7 @@ class VersionsCoverageCest
         $versions->initializeLatestVersion();
 
         $I->assertTrue(defined('PUBLISHPRESS_PSR_CONTAINER_VERSION'));
-        $I->assertEquals('2.0.2.0', PUBLISHPRESS_PSR_CONTAINER_VERSION);
+        $I->assertEquals('2.0.2.1', PUBLISHPRESS_PSR_CONTAINER_VERSION);
 
         $I->assertTrue(defined('PUBLISHPRESS_PSR_CONTAINER_INCLUDED'));
     }
